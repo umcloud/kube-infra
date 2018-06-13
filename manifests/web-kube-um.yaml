@@ -1,0 +1,82 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: web-kube-um
+  name: web-kube-um
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-kube-um
+  strategy:
+    rollingUpdate:
+      maxSurge: "100%"
+      maxUnavailable: "50%"
+  template:
+    metadata:
+      labels:
+        app: web-kube-um
+    spec:
+      containers:
+      - image: bitnami/nginx:1.12
+        name: web-kube-um
+        ports:
+        - containerPort: 80
+          name: http
+        volumeMounts:
+        - mountPath: /opt/bitnami/nginx/html
+          name: assets-vol
+      volumes:
+      - configMap:
+          name: web-kube-um
+        name: assets-vol
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: web-kube-um
+  name: web-kube-um
+  namespace: kube-system
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: web-kube-um
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    #kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/acme-challenge-type: http01
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+  name: web-kube-um
+  namespace: kube-system
+spec:
+  rules:
+  - host: www.kube.um.edu.ar
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web-kube-um
+          servicePort: 8080
+  - host: 200.51.41.185.xip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web-kube-um
+          servicePort: 8080
+  tls:
+  - hosts:
+    - www.kube.um.edu.ar
+    secretName: kube-um-cert
