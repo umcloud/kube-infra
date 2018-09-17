@@ -9,5 +9,6 @@ echo "kubectl --namespace=ceph create secret generic ceph-rbd-kube     --from-li
 exit 1
 } || exit 1
 set -x
+kubectl create ns ceph
 kubectl apply -f secrets/ceph-secret-admin.yaml
 kubectl apply -f secrets/ceph-rbd-kube.yaml
