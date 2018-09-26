@@ -29,6 +29,9 @@ spec:
         volumeMounts:
         - mountPath: /opt/bitnami/nginx/html
           name: assets-vol
+        env:
+        - name: TIMESTAMP
+          value: "@TIMESTAMP@"
       volumes:
       - configMap:
           name: web-kube-um

@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="header">
-<h1 class="title">UMCloud Kubernetes</h1>
+<h1 class="title">UMCloud Kubernetes <img src="/umcloud.png" id="id" class="class" width="32" height="32" /></h1>
 </div>
 <h2 id="usando-umcloud-kubernetes-desde-tu-laptop">Usando UMCloud Kubernetes desde tu laptop</h2>
 <ol style="list-style-type: decimal">
@@ -40,7 +40,12 @@ kubectl config use-context kube-um-${GH_USER}
 kubectl config view
 
 # Probar
+kubectl get node
 kubectl get pod
 kubectl get pod --all-namespaces</code></pre>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li><code>Kube =&gt; GH auth</code> by <a href="https://github.com/jjo/kubernetes-github-authn" class="uri">https://github.com/jjo/kubernetes-github-authn</a> ;)</li>
+</ul>
 </body>
 </html>

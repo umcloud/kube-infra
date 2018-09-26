@@ -1,6 +1,7 @@
 ---
-title: UMCloud Kubernetes
+title: UMCloud Kubernetes ![](/umcloud.png){#id .class width=32 height=32}
 ---
+
 ## Usando UMCloud Kubernetes desde tu laptop
 1. Instalar kubectl desde <https://kubernetes.io/docs/tasks/tools/install-kubectl/>
 2. Preparar la siguiente data
@@ -25,6 +26,11 @@ kubectl config use-context kube-um-${GH_USER}
 kubectl config view
 
 # Probar
+kubectl get node
 kubectl get pod
 kubectl get pod --all-namespaces
 ```
+
+## Referencias
+
+* `Kube => GH auth` by <https://github.com/jjo/kubernetes-github-authn> ;)
