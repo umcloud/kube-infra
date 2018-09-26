@@ -35,18 +35,25 @@ kubectl get pod --all-namespaces
 
 Loggeado en _GitHUB_, desde <https://github.com/settings/tokens>
 
-```
-[ Generate new token ] ->
-  NOTAR: 3 permisos:
-      user
-        [x] read:user
-        [x] user:email
-      admin:org
-        [x] read:org
+1. **[ Generate new token ]** ->
+2. Completar:
 
-[ Generate token ] ->
-  Copiarlo y tenerlo a mano (archivo, etc)
 ```
+  Token description:
+      kube-um       ( NOTA: ejemplo, puede ser cualquier description )
+
+  Select scopes:    ( NOTA: son *3* scopes )
+  :
+      admin:org
+        [x] read:org       Read org and team membership
+  :
+  :
+      user
+        [x] read:user      Read all user profile data
+        [x] user:email     Access user email addresses (read-only)
+```
+3. **[ Generate token ]** ->
+4. Copiarlo y tenerlo a mano (archivo, etc)
 
 ## Referencias
 

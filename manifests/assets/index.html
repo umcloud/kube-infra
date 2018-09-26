@@ -45,16 +45,26 @@ kubectl get pod
 kubectl get pod --all-namespaces</code></pre>
 <h2 id="generar-github-token">Generar GITHUB TOKEN</h2>
 <p>Loggeado en <em>GitHUB</em>, desde <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a></p>
-<pre><code>[ Generate new token ] -&gt;
-  NOTAR: 3 permisos:
-      user
-        [x] read:user
-        [x] user:email
-      admin:org
-        [x] read:org
+<ol style="list-style-type: decimal">
+<li><strong>[ Generate new token ]</strong> -&gt;</li>
+<li>Completar:</li>
+</ol>
+<pre><code>  Token description:
+      kube-um       ( NOTA: ejemplo, puede ser cualquier description )
 
-[ Generate token ] -&gt;
-  Copiarlo y tenerlo a mano (archivo, etc)</code></pre>
+  Select scopes:    ( NOTA: son *3* scopes )
+  :
+      admin:org
+        [x] read:org       Read org and team membership
+  :
+  :
+      user
+        [x] read:user      Read all user profile data
+        [x] user:email     Access user email addresses (read-only)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>[ Generate token ]</strong> -&gt;</li>
+<li>Copiarlo y tenerlo a mano (archivo, etc)</li>
+</ol>
 <h2 id="referencias">Referencias</h2>
 <ul>
 <li>Kubernetes Github auth <em>touchEs</em> by <a href="https://twitter.com/xjjo" class="uri">https://twitter.com/xjjo</a> at <a href="https://github.com/jjo/kubernetes-github-authn" class="uri">https://github.com/jjo/kubernetes-github-authn</a> ;)</li>
