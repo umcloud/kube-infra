@@ -33,4 +33,4 @@ kubectl get pod --all-namespaces
 
 ## Referencias
 
-* `Kube => GH auth` by <https://github.com/jjo/kubernetes-github-authn> ;)
+* Kubernetes Github auth _touchEs_ by <https://twitter.com/xjjo> at <https://github.com/jjo/kubernetes-github-authn> ;)
