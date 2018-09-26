@@ -57,6 +57,7 @@ Loggeado en _GitHUB_, desde <https://github.com/settings/tokens>
 
 ## Referencias
 
-* Kubernetes Github auth _touchEs_ by <https://twitter.com/xjjo> at <https://github.com/jjo/kubernetes-github-authn> ;)
-* Contenido generado desde <https://github.com/umcloud/kube-infra> con
-  [./92-web-kube-um-config.kubectl.sh](https://github.com/umcloud/kube-infra/blob/master/92-web-kube-um-config.kubectl.sh)
+* Kubernetes Github auth _touchEs_ por [jjo](https://twitter.com/xjjo):
+    - <https://github.com/jjo/kubernetes-github-authn> ;)
+* Contenido generado desde <https://github.com/umcloud/kube-infra> con:
+    - [./92-web-kube-um-config.kubectl.sh](https://github.com/umcloud/kube-infra/blob/master/92-web-kube-um-config.kubectl.sh)
