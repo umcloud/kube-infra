@@ -6,7 +6,7 @@ title: UMCloud Kubernetes ![](/umcloud.png){#id .class width=32 height=32}
 1. Instalar kubectl desde <https://kubernetes.io/docs/tasks/tools/install-kubectl/>
 2. Preparar la siguiente data
   - _GH\_USER_ : Tu usuario de github
-  - _GH\_TOKEN_ : Token generado siguiendo [la diapo](https://docs.google.com/presentation/d/1qWkmqWtxkbcneU799xzcYnb-AmmnWPUVq2ZjQBJeInM/edit#slide=id.g3b77f3a8c0_0_107)
+  - _GH\_TOKEN_ : Token generado siguiendo [Generar GITHUB TOKEN](#generar-github-token)
 3. En un shell, ejecutar
 
 ```
@@ -29,6 +29,23 @@ kubectl config view
 kubectl get node
 kubectl get pod
 kubectl get pod --all-namespaces
+```
+
+## Generar GITHUB TOKEN
+
+Loggeado en _GitHUB_, desde <https://github.com/settings/tokens>
+
+```
+[ Generate new token ] ->
+  NOTAR: 3 permisos:
+      user
+        [x] read:user
+        [x] user:email
+      admin:org
+        [x] read:org
+
+[ Generate token ] ->
+  Copiarlo y tenerlo a mano (archivo, etc)
 ```
 
 ## Referencias

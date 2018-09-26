@@ -19,7 +19,7 @@
 </ol>
 <ul>
 <li><em>GH_USER</em> : Tu usuario de github</li>
-<li><em>GH_TOKEN</em> : Token generado siguiendo <a href="https://docs.google.com/presentation/d/1qWkmqWtxkbcneU799xzcYnb-AmmnWPUVq2ZjQBJeInM/edit#slide=id.g3b77f3a8c0_0_107">la diapo</a></li>
+<li><em>GH_TOKEN</em> : Token generado siguiendo <a href="#generar-github-token">Generar GITHUB TOKEN</a></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li>En un shell, ejecutar</li>
@@ -43,6 +43,18 @@ kubectl config view
 kubectl get node
 kubectl get pod
 kubectl get pod --all-namespaces</code></pre>
+<h2 id="generar-github-token">Generar GITHUB TOKEN</h2>
+<p>Loggeado en <em>GitHUB</em>, desde <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a></p>
+<pre><code>[ Generate new token ] -&gt;
+  NOTAR: 3 permisos:
+      user
+        [x] read:user
+        [x] user:email
+      admin:org
+        [x] read:org
+
+[ Generate token ] -&gt;
+  Copiarlo y tenerlo a mano (archivo, etc)</code></pre>
 <h2 id="referencias">Referencias</h2>
 <ul>
 <li>Kubernetes Github auth <em>touchEs</em> by <a href="https://twitter.com/xjjo" class="uri">https://twitter.com/xjjo</a> at <a href="https://github.com/jjo/kubernetes-github-authn" class="uri">https://github.com/jjo/kubernetes-github-authn</a> ;)</li>
