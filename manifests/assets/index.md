@@ -2,7 +2,7 @@
 title: UMCloud Kubernetes ![](/umcloud.png){#id .class width=32 height=32}
 ---
 
-## Usando UMCloud Kubernetes desde tu laptop
+## Usando [UMCloud Kubernetes](#) desde tu laptop
 1. Instalar kubectl desde <https://kubernetes.io/docs/tasks/tools/install-kubectl/>
 2. Preparar la siguiente data
   - _GH\_USER_ : Tu usuario de github
