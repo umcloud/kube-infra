@@ -1,1 +1,1 @@
-helm install stable/heapster --name=heapster --namespace=kube-system
+helm upgrade --install heapster stable/heapster --namespace=kube-system
