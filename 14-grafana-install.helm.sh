@@ -1,1 +1,1 @@
-helm install stable/grafana --name=grafana --namespace=monitoring
+helm upgrade --install grafana stable/grafana --namespace=monitoring

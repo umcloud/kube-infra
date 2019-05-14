@@ -1,1 +1,1 @@
-helm install stable/prometheus --name=prometheus --namespace=monitoring
+helm upgrade --install prometheus stable/prometheus --namespace=monitoring
